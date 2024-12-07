@@ -1,11 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({
-    Name = "TDS HUB",
-    HidePremium = false,
-    SaveConfig = true,
-    ConfigFolder = "OrionTest"
-})
+local Window = OrionLib:MakeWindow({Name = "TDS HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -19,88 +14,77 @@ Icon = <string> - URL to the image you want displayed on the window.
 CloseCallback = <function> - Function to execute when the window is closed.
 ]]
 
--- War Machine Tab
-local WarMachineTab = Window:MakeTab({
+local TabMisc = Window:MakeTab({
+    Name = "Misc",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TabMisc:AddButton({
+    Name = "Mobile fly",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    end
+})
+
+local TabWarMachine = Window:MakeTab({
     Name = "War Machine",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
-WarMachineTab:AddButton({
-    Name = "Xtrey10x Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/War%20Machines"))()
-    end
+TabWarMachine:AddToggle({
+    Name = "Auto Farm Money",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/War%20Machines"))()
+        end
+    end    
 })
 
--- Pogo Obby Tab
-local PogoObbyTab = Window:MakeTab({
+local TabPogoObby = Window:MakeTab({
     Name = "Pogo Obby",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
-PogoObbyTab:AddButton({
+TabPogoObby:AddButton({
     Name = "Pro Hub",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/W10-Pogo-Obby-inf-22506"))()
     end
 })
 
--- Tower Of Hell Tab
-local TowerOfHellTab = Window:MakeTab({
+local TabTowerOfHell = Window:MakeTab({
     Name = "Tower Of Hell",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
-TowerOfHellTab:AddButton({
+TabTowerOfHell:AddButton({
     Name = "TOH HAX",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Tower-of-Hell-Hax-5597"))()
     end
 })
 
--- Fisch
-local FischTab = Window:MakeTab({
+TabTowerOfHell:AddButton({
+    Name = "Tower Of Hacks",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scowscripts/scowsscripts/main/TowerOfHacks/Script", true))()
+    end
+})
+
+local TabFisch = Window:MakeTab({
     Name = "Fisch",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
-FischTab:AddButton({
-    Name = "Random",
+TabFisch:AddButton({
+    Name = "Fischh",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Fischh/refs/heads/main/Fish"))()
     end
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---[[
-Tab:AddToggle({
-    Name = <string> - The name of the toggle.
-    Default = <bool> - The default value of the toggle.
-    Callback = <function> - The function of the toggle.
-})
-
-Tab:AddButton({
-    Name = <string> - The name of the button.
-    Callback = <function> - The function of the button.
-})
-]]
-
-
-OrionLib:Init()
