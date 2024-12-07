@@ -1,6 +1,11 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "TDS HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({
+    Name = "TDS HUB",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "OrionTest"
+})
 
 --[[
 Name = <string> - The name of the UI.
@@ -14,29 +19,60 @@ Icon = <string> - URL to the image you want displayed on the window.
 CloseCallback = <function> - Function to execute when the window is closed.
 ]]
 
-local Tab = Window:MakeTab({
-	Name = "War Machine",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+-- War Machine Tab
+local WarMachineTab = Window:MakeTab({
+    Name = "War Machine",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+WarMachineTab:AddToggle({
+    Name = "Auto Farm Money",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/War%20Machines"))()
+        end
+    end    
+})
+
+-- Pogo Obby Tab
+local PogoObbyTab = Window:MakeTab({
+    Name = "Pogo Obby",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+PogoObbyTab:AddButton({
+    Name = "Pro Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/W10-Pogo-Obby-inf-22506"))()
+    end
+})
+
+-- Tower Of Hell Tab
+local TowerOfHellTab = Window:MakeTab({
+    Name = "Tower Of Hell",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TowerOfHellTab:AddButton({
+    Name = "TOH HAX",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Tower-of-Hell-Hax-5597"))()
+    end
 })
 
 --[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-
-
 Tab:AddToggle({
-	Name = "Auto Farm Money",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end    
+    Name = <string> - The name of the toggle.
+    Default = <bool> - The default value of the toggle.
+    Callback = <function> - The function of the toggle.
 })
 
---[[
-Name = <string> - The name of the toggle.
-Default = <bool> - The default value of the toggle.
-Callback = <function> - The function of the toggle.
+Tab:AddButton({
+    Name = <string> - The name of the button.
+    Callback = <function> - The function of the button.
+})
 ]]
