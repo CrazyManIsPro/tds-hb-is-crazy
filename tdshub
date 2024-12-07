@@ -62,7 +62,7 @@ TowerOfHellTab:AddButton({
 })
 
 -- Fisch
-local TowerOfHellTab = Window:MakeTab({
+local FischTab = Window:MakeTab({
     Name = "Fisch",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
