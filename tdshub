@@ -26,14 +26,11 @@ local WarMachineTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-WarMachineTab:AddToggle({
-    Name = "Auto Farm Money",
-    Default = false,
-    Callback = function(Value)
-        if Value then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/War%20Machines"))()
-        end
-    end    
+WarMachineTab:AddButton({
+    Name = "Xtrey10x Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xtrey10x/xtrey10x-hub/main/War%20Machines"))()
+    end
 })
 
 -- Pogo Obby Tab
@@ -63,6 +60,34 @@ TowerOfHellTab:AddButton({
         loadstring(game:HttpGet("https://rawscripts.net/raw/Tower-of-Hell-Hax-5597"))()
     end
 })
+
+-- Fisch
+local TowerOfHellTab = Window:MakeTab({
+    Name = "Fisch",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+FischTab:AddButton({
+    Name = "Random",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Fischh/refs/heads/main/Fish"))()
+    end
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 --[[
 Tab:AddToggle({
