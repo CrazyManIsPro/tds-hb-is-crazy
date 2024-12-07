@@ -15,7 +15,7 @@ CloseCallback = <function> - Function to execute when the window is closed.
 ]]
 
 local Tab = Window:MakeTab({
-	Name = "Tower Of Hell",
+	Name = "War Machine",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -34,14 +34,16 @@ local Section = TOHTab:AddSection({
 Name = <string> - The name of the section.
 ]]
 
-TOHTab:AddButton({
-	Name = "TOH HAX",
-	Callback = function()
-      		print("button pressed")
-  	end    
+TOHTab:AddToggle({
+	Name = "Auto Farm Money",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
 })
 
 --[[
-Name = "Hax" - The name of the button.
-Callback = loadstring(game:HttpGet("https://rawscripts.net/raw/Tower-of-Hell-Hax-5597"))() - The function of the button.
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
 ]]
