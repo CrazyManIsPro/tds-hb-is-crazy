@@ -101,3 +101,6 @@ Tab:AddButton({
     Callback = <function> - The function of the button.
 })
 ]]
+
+
+OrionLib:Init()
