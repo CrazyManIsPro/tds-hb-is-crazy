@@ -34,7 +34,7 @@ local Section = TOHTab:AddSection({
 Name = <string> - The name of the section.
 ]]
 
-TOHTab:AddToggle({
+Tab:AddToggle({
 	Name = "Auto Farm Money",
 	Default = false,
 	Callback = function(Value)
