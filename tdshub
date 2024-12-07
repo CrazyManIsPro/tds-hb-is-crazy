@@ -85,6 +85,6 @@ local TabFisch = Window:MakeTab({
 TabFisch:AddButton({
     Name = "Fischh",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Fischh/refs/heads/main/Fish"))()
+        loadstring(game:HttpGet("https://pastebin.com/raw/q7j7nAf0",true))()
     end
 })
