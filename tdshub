@@ -88,3 +88,16 @@ TabFisch:AddButton({
         loadstring(game:HttpGet("https://pastebin.com/raw/q7j7nAf0",true))()
     end
 })
+
+local TabBloxFruit = Window:MakeTab({
+    Name = "Fisch",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TabBloxFruit:AddButton({
+    Name = "Redz Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Blox-Fruits-REDZ-HUB-V2-KEYLESS-23532"))()
+    end
+})
