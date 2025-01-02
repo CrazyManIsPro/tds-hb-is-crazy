@@ -101,3 +101,10 @@ TabBloxFruit:AddButton({
         loadstring(game:HttpGet("https://rawscripts.net/raw/Blox-Fruits-REDZ-HUB-V2-KEYLESS-23532"))()
     end
 })
+
+TabBloxFruit:AddButton({
+    Name = "Gangteng Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/516a5669fc39b4945cd0609a08264505.lua"))()
+    end
+})
