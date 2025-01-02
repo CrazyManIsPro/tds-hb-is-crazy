@@ -108,3 +108,59 @@ TabBloxFruit:AddButton({
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/516a5669fc39b4945cd0609a08264505.lua"))()
     end
 })
+
+-- Universal Time Tab
+local TabAUT = Window:MakeTab({
+    Name = "A Universal Time",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TabAUT:AddButton({
+    Name = "Stingray Finger-Farm",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AUT-Finger-Farm-22690"))()
+    end
+})
+
+-- Weaponry Tab
+local TabWeaponry = Window:MakeTab({
+    Name = "Weaponry",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TabWeaponry:AddButton({
+    Name = "Nexus",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/s-o-a-b/nexus/main/loadstring"))()
+    end
+})
+
+-- Gunfight Arena Tab
+local TabGunfightArena = Window:MakeTab({
+    Name = "Gunfight Arena",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TabGunfightArena:AddButton({
+    Name = "Tbao Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Gunfight-Arena-Tbao-Hub-23793"))()
+    end
+})
+
+-- Obby but on Bike Tab
+local TabBikeObby = Window:MakeTab({
+    Name = "Obby but on Bike",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TabBikeObby:AddButton({
+    Name = "Instant Complete",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/W47-Obby-But-You're-On-a-Bike-uto-finish-ll-worlds-20590"))()
+    end
+})
