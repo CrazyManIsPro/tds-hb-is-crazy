@@ -131,7 +131,7 @@ local TabWeaponry = Window:MakeTab({
 })
 
 TabWeaponry:AddButton({
-    Name = "Nexus",
+    Name = "Vertex v0.0.1",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/s-o-a-b/nexus/main/loadstring"))()
     end
