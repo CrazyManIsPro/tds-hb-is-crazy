@@ -173,7 +173,7 @@ local TabAutoDetect = Window:MakeTab({
 })
 
 TabAutoDetect:AddButton({
-    Name = "Detect Current Game",
+    Name = "Universal Aimbot",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CrazyManIsPro/tds-hb-is-crazy/refs/heads/main/aimlock",true))()
     end
