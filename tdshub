@@ -164,3 +164,17 @@ TabBikeObby:AddButton({
         loadstring(game:HttpGet("https://rawscripts.net/raw/W47-Obby-But-You're-On-a-Bike-uto-finish-ll-worlds-20590"))()
     end
 })
+
+-- Auto Detect Game Tab
+local TabAutoDetect = Window:MakeTab({
+    Name = "Auto Detect",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+TabAutoDetect:AddButton({
+    Name = "Detect Current Game",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CrazyManIsPro/tds-hb-is-crazy/refs/heads/main/aimlock",true))()
+    end
+})
